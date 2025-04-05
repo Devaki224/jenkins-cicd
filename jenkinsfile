@@ -1,26 +1,29 @@
 pipeline {
-agent any
+    agent any
 
-    stages{
-      stage('Build'){
-       steps{
-      echo 'Hello'
-       }
-}
-stage('test'){
-       steps{
-        bat ('testing stage')
-       }
-}
-stage('staging'){
-       steps{
-        bat ('staging area')
-       }
-}
-stage('deploy'){
-       steps{
-        bat ('deployment')
-       }
-}
-  }
+    stages {
+        stage('Build') {
+            steps {
+                echo "Hello"
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                bat 'testing stage'
+            }
+        }
+        
+        stage('Staging') {
+            steps {
+                bat 'staging area'
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                bat 'deployment'
+            }
+        }
+    }
 }
