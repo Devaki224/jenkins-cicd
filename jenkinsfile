@@ -1,24 +1,25 @@
 pipeline {
 agent any
+
     stages{
       stage('Build'){
        steps{
-      echo "Hello"
+      echo 'Hello'
        }
 }
 stage('test'){
        steps{
-        bat ("testing stage")
+        bat ('testing stage')
        }
 }
 stage('staging'){
        steps{
-        bat ("staging area")
+        bat ('staging area')
        }
 }
 stage('deploy'){
        steps{
-        bat ("deployment")
+        bat ('deployment')
        }
 }
   }
